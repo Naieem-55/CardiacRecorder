@@ -45,7 +45,7 @@ public class Register extends AppCompatActivity {
                 final String conPasswordText=conPassword.getText().toString();
 
                 if(fullNameText.isEmpty() || emailText.isEmpty() || phoneText.isEmpty() || passwordText.isEmpty() || conPasswordText.isEmpty()){
-                    Toast.makeText(Register.this, "Please fill all the Form", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Please fill all the Data", Toast.LENGTH_SHORT).show();
                 }else if(!passwordText.equals(conPasswordText)){
                     Toast.makeText(Register.this, "Password are not matching", Toast.LENGTH_SHORT).show();
                 }else{

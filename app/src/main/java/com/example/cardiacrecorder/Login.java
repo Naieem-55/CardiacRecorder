@@ -20,7 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 public class Login extends AppCompatActivity {
 
     DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReferenceFromUrl("https://cardiacrecorder-ee617-default-rtdb.firebaseio.com/");
-
+    public static String phoneNo;
+    public static int serialNo = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 final String phoneText=phone.getText().toString();
                 final String passwordText=password.getText().toString();
+                phoneNo=phoneText;
 
                 if(phoneText.isEmpty() || passwordText.isEmpty()){
                     Toast.makeText(Login.this, "Please Enter your mobile and password.", Toast.LENGTH_SHORT).show();
